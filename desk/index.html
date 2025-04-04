@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desk — YJMSTR</title>
+  <meta name="description" content="Desk setups of YJMSTR — monitors, keyboards, and everything on the desk." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111618'/%3E%3Ctext x='32' y='43' font-family='Menlo, monospace' font-size='30' font-weight='700' fill='%234ade80' text-anchor='middle'%3E_%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="page page-wide">
+    <header class="page-header">
+      <span class="crumb mono"><a href="../index.html">~</a> / desk</span>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+    </header>
+
+    <h1 class="article-title">Desk</h1>
+    <p class="article-meta mono">battlestations, past &amp; present · click any photo to view full size</p>
+
+    <section>
+      <h2 class="mono"><span class="prompt">~/</span>setups</h2>
+      <p class="gallery-note">Home, dorm &amp; office — an ongoing quest for the perfect workspace</p>
+      <div class="gallery-grid">
+        <figure class="g-item" data-full="img/desk-01.jpg" data-caption="Home base — Razer Blade on a monitor arm, Innocn ultrawide with a light bar, MacBook Air on the side">
+          <img src="img/thumb/desk-01.jpg" alt="Home desk with a Razer laptop on an arm and an ultrawide monitor" loading="lazy" />
+          <figcaption class="mono">Home base</figcaption>
+        </figure>
+        <figure class="g-item" data-full="img/desk-02.jpg" data-caption="Side view — laptop arm, ultrawide &amp; light bar, custom keyboard">
+          <img src="img/thumb/desk-02.jpg" alt="Side view of the desk with a monitor arm and ultrawide screen" loading="lazy" />
+          <figcaption class="mono">Side view</figcaption>
+        </figure>
+        <figure class="g-item" data-full="img/desk-03.jpg" data-caption="Dorm station — Surface Pro, stacked dual-screen portable monitor, and an external GPU dock">
+          <img src="img/thumb/desk-03.jpg" alt="Dorm desk with a Surface Pro, dual portable screens and an external GPU" loading="lazy" />
+          <figcaption class="mono">Dorm station · eGPU</figcaption>
+        </figure>
+        <figure class="g-item" data-full="img/desk-04.jpg" data-caption="Night shift — Surface Pro with a stacked dual-screen portable monitor">
+          <img src="img/thumb/desk-04.jpg" alt="Surface Pro with a stacked dual-screen portable monitor at night" loading="lazy" />
+          <figcaption class="mono">Night shift</figcaption>
+        </figure>
+        <figure class="g-item" data-full="img/desk-05.jpg" data-caption="Home desk, revisited — monitor arm &amp; light bar, Alienware under the desk, Miku watching over">
+          <img src="img/thumb/desk-05.jpg" alt="Home desk with a monitor on an arm and a Miku plush on the shelf" loading="lazy" />
+          <figcaption class="mono">Home desk, revisited</figcaption>
+        </figure>
+        <figure class="g-item" data-full="img/desk-06.jpg" data-caption="Office cubicle — dual-screen portable monitor folded flat, travel-friendly">
+          <img src="img/thumb/desk-06.jpg" alt="Office cubicle desk with a folded dual-screen portable monitor" loading="lazy" />
+          <figcaption class="mono">Office cubicle</figcaption>
+        </figure>
+        <figure class="g-item" data-full="img/desk-07.jpg" data-caption="Office battlestation — four screens: laptop, stacked dual portable, portable display &amp; Dell">
+          <img src="img/thumb/desk-07.jpg" alt="Office desk with four screens" loading="lazy" />
+          <figcaption class="mono">Office battlestation</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+    <figure class="lb-figure">
+      <img id="lb-img" src="" alt="" />
+      <figcaption class="mono" id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-next" id="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      const items = [...document.querySelectorAll(".g-item")];
+      const box = document.getElementById("lightbox");
+      const img = document.getElementById("lb-img");
+      const cap = document.getElementById("lb-caption");
+      let index = 0;
+
+      function show(i) {
+        index = (i + items.length) % items.length;
+        const item = items[index];
+        img.src = item.dataset.full;
+        img.alt = item.querySelector("img").alt;
+        cap.textContent =
+          item.dataset.caption + "  ·  " + (index + 1) + "/" + items.length;
+        box.hidden = false;
+        document.body.style.overflow = "hidden";
+      }
+      function hide() {
+        box.hidden = true;
+        img.src = "";
+        document.body.style.overflow = "";
+      }
+
+      items.forEach((item, i) =>
+        item.addEventListener("click", () => show(i))
+      );
+      document.getElementById("lb-close").addEventListener("click", hide);
+      document.getElementById("lb-prev").addEventListener("click", (e) => { e.stopPropagation(); show(index - 1); });
+      document.getElementById("lb-next").addEventListener("click", (e) => { e.stopPropagation(); show(index + 1); });
+      box.addEventListener("click", (e) => { if (e.target === box) hide(); });
+      document.addEventListener("keydown", (e) => {
+        if (box.hidden) return;
+        if (e.key === "Escape") hide();
+        if (e.key === "ArrowLeft") show(index - 1);
+        if (e.key === "ArrowRight") show(index + 1);
+      });
+    })();
+  </script>
+</body>
+</html>
