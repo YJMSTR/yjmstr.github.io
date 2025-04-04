@@ -1,0 +1,18 @@
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/cgi-0.4.2/ext/cgi/escape
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/cgi-0.4.2/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-84xgna sitelibdir\=./.gem.20250404-95244-84xgna clean
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/cgi-0.4.2/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-84xgna sitelibdir\=./.gem.20250404-95244-84xgna
+compiling escape.c
+linking shared-object cgi/escape.so
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/cgi-0.4.2/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-84xgna sitelibdir\=./.gem.20250404-95244-84xgna install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250404-95244-84xgna/cgi
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/cgi-0.4.2/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-84xgna sitelibdir\=./.gem.20250404-95244-84xgna clean

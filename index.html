@@ -1,0 +1,207 @@
+---
+layout: home
+title: Home
+---
+
+<div class="home">
+  <div class="profile">
+    <div class="profile-content">
+      <h1 class="animate-fade-in">Welcome to YJMSTR's Blog</h1>
+      <div class="profile-description animate-fade-in">
+        <p>YJMSTR(Yangjie Zhang) is a Master's student in Computer Science at ShanghaiTech University.</p>
+        <div class="contact-info">
+          <a href="mailto:zhangyj12024@shanghaitech.edu.cn" class="email-link">
+            <i class="fas fa-envelope"></i> zhangyj12024@shanghaitech.edu.cn
+          </a>
+          <span class="separator">|</span>
+          <a href="mailto:pyjmstr@gmail.com" class="email-link">
+            <i class="fas fa-envelope"></i> pyjmstr@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title animate-fade-in">Latest Blog Posts</h2>
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      <div class="post-item animate-fade-in">
+        <div class="post-meta">
+          <i class="far fa-calendar-alt"></i>
+          <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+        </div>
+        <h3 class="post-title">
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {% if post.description %}
+          <p class="post-description">{{ post.description }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --border-color: #e9ecef;
+}
+
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile {
+  text-align: center;
+  margin: 2em 0;
+  padding: 3em 2em;
+  background-color: var(--card-background);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+}
+
+.profile h1 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+
+.profile-description {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.email-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--primary-color);
+}
+
+.separator {
+  color: var(--border-color);
+}
+
+.section-title {
+  color: var(--primary-color);
+  margin: 2em 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+.post-list {
+  display: grid;
+  gap: 2em;
+}
+
+.post-item {
+  background-color: var(--card-background);
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.post-meta i {
+  margin-right: 0.5em;
+}
+
+.post-title {
+  margin: 0.5em 0;
+}
+
+.post-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.post-link:hover {
+  color: var(--primary-color);
+}
+
+.post-description {
+  color: #666;
+  margin-top: 0.5em;
+  line-height: 1.6;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+  
+  .profile {
+    padding: 2em 1em;
+  }
+  
+  .profile h1 {
+    font-size: 2em;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .separator {
+    display: none;
+  }
+}
+</style> 

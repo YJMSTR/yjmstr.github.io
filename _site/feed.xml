@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-04T22:47:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">YJMSTR’s Site</title><subtitle>Welcome</subtitle><entry><title type="html">Hello, world</title><link href="http://localhost:4000/blog/2025/04/04/welcome-to-my-blog/" rel="alternate" type="text/html" title="Hello, world" /><published>2025-04-04T00:00:00+08:00</published><updated>2025-04-04T00:00:00+08:00</updated><id>http://localhost:4000/blog/2025/04/04/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/04/welcome-to-my-blog/"><![CDATA[<h1 id="welcome-to-my-blog">Welcome to My Blog</h1>
+
+<p>Hello everyone! I am a Master’s student in Computer Science at ShanghaiTech University. This blog will document my learning journey, research insights, and technical sharing.</p>
+
+<h2 id="about-me">About Me</h2>
+
+<ul>
+  <li>Currently pursuing a Master’s degree in Computer Science at ShanghaiTech University</li>
+  <li>Passionate about Computer Systems, including Computer Architecture, High Performance Computing and LLM for Code.</li>
+  <li>Enjoy exploring new technologies and solving challenging problems</li>
+</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[This is a test blog post on my new blog.]]></summary></entry></feed>

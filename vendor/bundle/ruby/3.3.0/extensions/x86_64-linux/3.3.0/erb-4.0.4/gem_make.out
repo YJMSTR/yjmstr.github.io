@@ -1,0 +1,18 @@
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/erb-4.0.4/ext/erb/escape
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/erb-4.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-cv4r0s sitelibdir\=./.gem.20250404-95244-cv4r0s clean
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/erb-4.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-cv4r0s sitelibdir\=./.gem.20250404-95244-cv4r0s
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/erb-4.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-cv4r0s sitelibdir\=./.gem.20250404-95244-cv4r0s install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250404-95244-cv4r0s/erb
+
+current directory: /home/yjmstr/yjmstr.github.io/vendor/bundle/ruby/3.3.0/gems/erb-4.0.4/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250404-95244-cv4r0s sitelibdir\=./.gem.20250404-95244-cv4r0s clean
