@@ -897,7 +897,10 @@ li strong { color: var(--text); font-weight: 600; }
 /* ---------------- Responsive ---------------- */
 
 @media (max-width: 820px) {
-  .banner img { height: 420px; }
+  .banner img {
+    height: 420px;
+    object-position: 10% 72%; /* keep the comet head (left side) in frame on narrow screens */
+  }
 
   .container { padding: 28px 20px 36px; }
 
