@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YJMSTR</title>
   <meta name="description" content="YJMSTR — pre-training infra, GPU kernels, RTL simulation." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111618'/%3E%3Ctext x='32' y='43' font-family='Menlo, monospace' font-size='30' font-weight='700' fill='%234ade80' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111618'/%3E%3Ctext x='32' y='43' font-family='Menlo, monospace' font-size='30' font-weight='700' fill='%234ade80' text-anchor='middle'%3E_%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
@@ -13,33 +13,33 @@
 </head>
 <body>
   <header class="banner">
-    <img src="photos/img/coast-pano.jpg" alt="Cape panorama — aerial photo shot on DJI Flip, 2026-01" />
+    <img src="assets/banner-comet.jpg" alt="Comet C/2025 R3 — green coma with a long ion tail" />
   </header>
   <div class="container">
-
-    <!-- ============ Sidebar ============ -->
-    <aside class="sidebar">
-      <!-- To change the avatar, replace avatar.jpg with a square photo -->
-      <img class="avatar" src="avatar.jpg" alt="YJMSTR" />
-      <h1 class="name">YJMSTR</h1>
-      <p class="handle mono">@yjmstr</p>
-      <p class="tagline">Coevolving with technology.</p>
-
-      <ul class="facts mono">
-        <li><span class="fact-key">work</span> Intern @ Z.ai</li>
-        <li><span class="fact-key">focus</span> Perf Optimization</li>
-      </ul>
-
-      <nav class="contact mono">
-        <a href="mailto:zhangyj12024@shanghaitech.edu.cn">email</a>
-        <a href="https://github.com/yjmstr" target="_blank" rel="noopener">github</a>
-        <a href="blog/index.html">blog</a>
-        <a href="photos/index.html">photos</a>
-      </nav>
-    </aside>
-
-    <!-- ============ Main ============ -->
     <main>
+
+      <!-- Personal portrait, centered -->
+      <figure class="hero-portrait">
+        <img src="photos/img/under-the-milky-way.jpg" alt="YJMSTR pointing at the Milky Way on Perseids night" />
+        <figcaption class="mono">Under the Milky Way · Qixinghu, Inner Mongolia · 2026-08</figcaption>
+      </figure>
+
+      <!-- Identity -->
+      <div class="identity">
+        <h1 class="name">Yangjie Zhang</h1>
+        <p class="handle mono">张炀杰</p>
+        <p class="tagline">YJMSTR</p>
+        <ul class="facts mono">
+          <li><span class="fact-key">work</span> Intern @ Z.ai</li>
+          <li><span class="fact-key">focus</span> Perf Optimization</li>
+        </ul>
+        <nav class="contact mono">
+          <a href="mailto:zhangyj12024@shanghaitech.edu.cn">email</a>
+          <a href="https://github.com/yjmstr" target="_blank" rel="noopener">github</a>
+          <a href="blog/index.html">blog</a>
+          <a href="photos/index.html">photos</a>
+        </nav>
+      </div>
 
       <!-- Terminal intro -->
       <div class="terminal">
@@ -54,25 +54,16 @@
             occasional RTL simulator. I like making "unsupported" hardware work,
             and I'm fascinated by agentic workflows. Off the keyboard:
             astrophotography, galgame, gadgets &amp; desk setups.</p>
+          <p><span class="prompt">~$</span> cat about.txt</p>
+          <p class="term-out">Currently an intern at
+            <a href="https://z.ai/" target="_blank" rel="noopener">Z.ai</a> · previously at
+            <a href="https://www.baidu.com/" target="_blank" rel="noopener">Baidu</a>,
+            <a href="https://shanghai.nyu.edu/" target="_blank" rel="noopener">NYU Shanghai</a>,
+            <a href="https://www.amd.com/" target="_blank" rel="noopener">AMD</a> and
+            <a href="http://english.is.cas.cn/" target="_blank" rel="noopener">ISCAS</a>.</p>
           <p><span class="prompt">~$</span> <span class="cursor">▊</span></p>
         </div>
       </div>
-
-      <section id="about">
-        <h2 class="mono"><span class="prompt">~/</span>about</h2>
-        <p>
-          My interests are hardware–software co-design, performance
-          optimization, and automated (agentic) workflows.
-        </p>
-        <p>
-          I am currently an intern at
-          <a href="https://z.ai/" target="_blank" rel="noopener">Z.ai</a>, and I have also stayed at
-          <a href="https://www.baidu.com/" target="_blank" rel="noopener">Baidu</a>,
-          <a href="https://shanghai.nyu.edu/" target="_blank" rel="noopener">NYU Shanghai</a>,
-          <a href="https://www.amd.com/" target="_blank" rel="noopener">AMD</a>, and
-          <a href="http://english.is.cas.cn/" target="_blank" rel="noopener">ISCAS</a>.
-        </p>
-      </section>
 
       <section id="blog">
         <h2 class="mono"><span class="prompt">~/</span>blog</h2>
@@ -118,10 +109,6 @@
 
   <footer class="footer">
     <p class="mono">© <span id="year"></span> YJMSTR · <img class="footer-logo" src="assets/logos/kimi.png" alt="Kimi logo" />built by Kimi K3</p>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-    </button>
   </footer>
 
   <script src="script.js"></script>

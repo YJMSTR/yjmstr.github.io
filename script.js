@@ -1,17 +1,7 @@
-// Theme handling: respect saved choice, fall back to system preference.
+// Dark theme only — the site is designed around the night-sky background.
 (function () {
   const root = document.documentElement;
-  const saved = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  root.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
-
-  const toggle = document.getElementById("theme-toggle");
-  toggle.addEventListener("click", function () {
-    const next =
-      root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-  });
+  root.setAttribute("data-theme", "dark");
 
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
